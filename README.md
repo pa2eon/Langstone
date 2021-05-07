@@ -3,7 +3,7 @@
 Update: PA2EON - check the TFT IO-bus for 7 inch rpi TFT and the different IO-bus for 5 inch TFT.
 In the files: LangstoneGUI.c (the main program) graphics.h, touch.h 
 
-====================================================================================================
+==========================================================================================
 
 This is an experimental project to produce a simple VHF, UHF and Microwave SDR Transceiver operating on SSB CW and FM.
 
