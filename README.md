@@ -12,8 +12,8 @@ Currently only the following hardware is supported:-
 
 - Raspberry Pi 4
 
-- Official Raspberry Pi 7" touchscreen 
-  Pimoroni Hyperpixel4 4" Touchscreen
+- Official Raspberry Pi 7" touchscreen / 
+  Pimoroni Hyperpixel4 4" Touchscreen /
   (In development) 5 inch TFT display with HDMI and IO-bus
 
 - Adalm Pluto SDR Module
