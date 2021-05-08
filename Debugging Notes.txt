@@ -56,7 +56,13 @@ You should not see any error messages.
 ps -ax   again should now show both programs running.  
 
 You may see occasional aU characters printed on your ssh screen. This is normal and indicates an occasional audio overrun condition. 
-This seems to be a bug in GNU radio on the Pi and does not affect operation if they are only happening occasionally. 
+This seems to be a bug in GNU radio on the Pi and does not affect operation if they are only happening occasionally.
+
+Extra info for the 5 inch TFT screen.
+After installing the driver(s) use the test commands:
+
+sudo TSLIB_FBDEVICE=/dev/fb0 TSLIB_TSDEVICE=/dev/input/event2 ts_calibrate
+sudo TSLIB_FBDEVICE=/dev/fb0 TSLIB_TSDEVICE=/dev/input/event2 ts_test
 
 
 
