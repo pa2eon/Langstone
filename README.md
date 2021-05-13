@@ -3,7 +3,7 @@
 13-05-2021: New use of the the 5 inch TFT screen is mentioned as: ADS7846 Touchscreen
 You can find the install instructions at site: https://www.waveshare.com/wiki/5inch_HDMI_LCD
 
-Note: The clibrations values in the HWtest.c file is in beta .. code is stil in development.
+Note: The calibrations values in the HWtest.c file is in beta .. code is stil in development.
 
 
 This is an experimental project to produce a simple VHF, UHF and Microwave SDR Transceiver operating on SSB CW and FM.
