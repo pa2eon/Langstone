@@ -1,7 +1,9 @@
-# Langstone SDR Transceiver by Colin Durbridge G4EML
+# Langstone SDR Transceiver by Colin Durbridge G4EML / added 5 inch TFT by PA2EON
 
 13-05-2021: New use of the the 5 inch TFT screen is mentioned as: ADS7846 Touchscreen
 You can find the install instructions at site: https://www.waveshare.com/wiki/5inch_HDMI_LCD
+
+Note: The clibrations values in the HWtest.c file is in beta .. code is stil in development.
 
 
 This is an experimental project to produce a simple VHF, UHF and Microwave SDR Transceiver operating on SSB CW and FM.
@@ -111,14 +113,9 @@ To test the setup of the TFT and the Rpi4 the next commands:
 #sudo TSLIB_FBDEVICE=/dev/fb0 TSLIB_TSDEVICE=/dev/input/event2 ts_calibrate
 #sudo TSLIB_FBDEVICE=/dev/fb0 TSLIB_TSDEVICE=/dev/input/event2 ts_test
 
-In the source list you will find a ts.conf
-
-
-
-
+In the source list you will find a /etc/ts.conf
 
 ```
-
 
 The initial build can take some time, however it does not need any user input, so go and make a cup of coffee and keep an eye on the touchscreen.  When the build is finished the Pi will reboot and start-up with the Langstone Transceiver. If it does not appear to be working see the file 'Debugging Notes.txt' for some things to look at.
 
