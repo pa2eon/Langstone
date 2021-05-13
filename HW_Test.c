@@ -135,6 +135,11 @@ int main()
           p=1;
           hyperPixelPresent=1;
           }                                                                  
+        if(strstr(ln,"ADS7846 Touchscreen")!=NULL)                            //Found 5 inch TFT - HDMI
+          {
+          p=1;
+          hyperPixelPresent=2;
+          }
       }
       
       if(ln[0]=='H')        //handlers
@@ -166,13 +171,12 @@ int main()
   initMCP23017(mcp23017_addr);
 }
 
-
-
  
 void processTouch()
 { 
 
 if(hyperPixelPresent==1)
+
 {
 float tempX=touchX;
 float tempY=touchY;
@@ -182,8 +186,23 @@ touchX=tempY;                       //swap X and Y
 touchY=tempX;
 }
 
+if(hyperPixelPresent==2)            // If 5 inch TFT
+{
+float tempX=touchX;
+float tempY=touchY;
+//tempX=tempX*0.025;
+tempX=tempX*0.21;                    //convert 0-800 to 0-480
+//tempY=800-(tempY*1.6666);           //convert 480-0   to 0-800
+tempY=tempY*0.12;
+//touchX=tempY;                       //swap X and Y
+//touchY=tempX;
+touchX=tempX;
+touchY=tempY;
+}
+
 printf("Touch detected at X=%d Y=%d\n",touchX,touchY);
 } 
+
 
 void processMouse(int mbut)
 {
