@@ -1,10 +1,8 @@
 # Langstone SDR Transceiver by Colin Durbridge G4EML
 
-Update: PA2EON - check the TFT IO-bus for 7 inch rpi TFT and the different IO-bus for 5 inch TFT.
-In the files: LangstoneGUI.c (the main program) and / or graphics.h, touch.h 
-The 5 inch TFT screen is mentioned as: ADS7846 Touchscreen
+13-05-2021: New use of the the 5 inch TFT screen is mentioned as: ADS7846 Touchscreen
+You can find the install instructions at site: https://www.waveshare.com/wiki/5inch_HDMI_LCD
 
-=======================================================================
 
 This is an experimental project to produce a simple VHF, UHF and Microwave SDR Transceiver operating on SSB CW and FM.
 
@@ -102,7 +100,23 @@ chmod +x install_hyperpixel4.sh
 # For the 5" TFT Display with HDMI:-
 
 ```sh
-wget https:// in development on this github 
+First start with the setup from the site: https://www.waveshare.com/wiki/5inch_HDMI_LCD
+Make the small changes in the config.txt on the Rpi 4
+Download the 'drivers' from the site: git clone https://github.com/waveshare/LCD-show.git
+
+Leave the orientation settings default.
+Install not the 'virtual keyboard'
+
+To test the setup of the TFT and the Rpi4 the next commands:
+#sudo TSLIB_FBDEVICE=/dev/fb0 TSLIB_TSDEVICE=/dev/input/event2 ts_calibrate
+#sudo TSLIB_FBDEVICE=/dev/fb0 TSLIB_TSDEVICE=/dev/input/event2 ts_test
+
+In the source list you will find a ts.conf
+
+
+
+
+
 ```
 
 
